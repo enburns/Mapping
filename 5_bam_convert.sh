@@ -17,7 +17,7 @@ samtools view -bS ${base}.sam | samtools sort > ${base}_sorted.bam
 
 #Setp2 - index
 echo "indexing...hope its faster"
-samtools index L101_sorted.bam
+samtools index ${base}_sorted.bam
 
 #run flagstats
 echo "Calculate Mapping Stats"
