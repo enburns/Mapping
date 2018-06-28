@@ -5,18 +5,18 @@ module load samtools
 
 #Step 1 - Map
 echo "mapping NAD101"
-bwa mem -a -t 4 -M -R @RG"\t"ID:$base"\t"SM:$base"\t"PL:illumina"\t"LB:$base /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD101_CAGAGAGG-AAGGAGTA_L00*_R1_001_val_1.qc.fq) <(cat NAD101_CAGAGAGG-AAGGAGTA_L00*_R2_001_val_2.qc.fq) > NAD101.sam
+bwa mem -a -t 4 -M -R @RG"\t"ID:NAD101"\t"SM:NAD101"\t"PL:illumina"\t"LB:NAD101 /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD101_CAGAGAGG-AAGGAGTA_L00*_R1_001_val_1.qc.fq) <(cat NAD101_CAGAGAGG-AAGGAGTA_L00*_R2_001_val_2.qc.fq) > NAD101.sam
 
 echo "mapping NAD197"
-bwa mem -a -t 4 -M -R @RG"\t"ID:$base"\t"SM:$base"\t"PL:illumina"\t"LB:$base /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_197_ACTTGA_L00*_R1_001_val_1.qc.fq) <(cat NAD_197_ACTTGA_L00*_R2_001_val_2.qc.fq) > NAD197.sam
+bwa mem -a -t 4 -M -R @RG"\t"ID:NAD197"\t"SM:NAD197"\t"PL:illumina"\t"LB:NAD197 /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_197_ACTTGA_L00*_R1_001_val_1.qc.fq) <(cat NAD_197_ACTTGA_L00*_R2_001_val_2.qc.fq) > NAD197.sam
 
 echo "mapping NAD205"
-bwa mem -a -t 4 -M -R @RG"\t"ID:$base"\t"SM:$base"\t"PL:illumina"\t"LB:$base /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_205_CAGATC_L00*_R1_001_val_1.qc.fq) <(cat NAD_205_CAGATC_L00*_R2_001_val_2.qc.fq) > NAD205.sam
+bwa mem -a -t 4 -M -R @RG"\t"ID:NAD205"\t"SM:NAD205"\t"PL:illumina"\t"LB:NAD205 /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_205_CAGATC_L00*_R1_001_val_1.qc.fq) <(cat NAD_205_CAGATC_L00*_R2_001_val_2.qc.fq) > NAD205.sam
 
 echo "CHECK THE FOR LOOP FOR SAM "
 
 echo "mapping NAD49"
-bwa mem -a -t 4 -M -R @RG"\t"ID:$base"\t"SM:$base"\t"PL:illumina"\t"LB:$base /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_205_CAGATC_L00*_R1_001_val_1.qc.fq) <(cat NAD_205_CAGATC_L00*_R2_001_val_2.qc.fq) > NAD205.sam
+bwa mem -a -t 4 -M -R @RG"\t"ID:$NAD49"\t"SM:NAD49"\t"PL:illumina"\t"LB:NAD49 /finno/data/equCab3.0_NCBI/ref_assembly/genome_3.0.fna <(cat NAD_205_CAGATC_L00*_R1_001_val_1.qc.fq) <(cat NAD_205_CAGATC_L00*_R2_001_val_2.qc.fq) > NAD205.sam
 echo "mapping done!"
 
 
